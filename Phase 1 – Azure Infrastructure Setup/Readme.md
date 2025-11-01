@@ -57,20 +57,20 @@ Each lab directory includes:
 
 ---
 
-### 📸 **Screenshot Documentation**
-| Step | Filename | Description |
-|------|-----------|-------------|
-| 1 | `phase1-step1-resourcegroup-creation.png` | Resource group `Intune-Lab` successfully created in West US 2 |
-| 2 | `phase1-step2-vnet-subnet-creation.png` | Virtual network `Intune-VNet` and `Intune-Subnet` configured |
-| 3 | `phase1-step3a-azurebastionsubnet-creation.png` | Added `AzureBastionSubnet` to VNet |
-| 4 | `phase1-step3b-bastion-configuration-review.png` | Final Bastion setup screen before deployment |
-| 5 | `phase1-step3c-bastion-deployment-success.png` | `Intune-Bastion03` deployed successfully |
-| 6 | `phase1-step4a-vm-networking-no-public-ip.png` | VM networking configuration without public IP |
-| 7 | `phase1-step4b-vm-deployment-success.png` | Windows 11 VM `IntuneClient01` running in private subnet |
-| 8 | `phase1-step4c-bastion-rdp-connection.png` | Connecting to VM using Bastion via browser-based RDP |
-| 9 | `phase1-step4d-windows11-oobe-setup.png` | Initial Windows 11 out-of-box setup screen |
-| 10 | `phase1-step4e-windows11-desktop.png` | Windows 11 desktop confirmed accessible via Bastion |
-| 11 | `phase1-summary-lab-complete.png` | Overview of completed Phase 1 resources and success confirmation |
+## 📸 Screenshots
+
+| Step | Screenshot | Description |
+|------|-------------|--------------|
+| **1** | ![Resource Group Creation](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%201%20%E2%80%93%20Azure%20Infrastructure%20Setup/screenshots/phase1-step1-resourcegroup-creation.png) | Created the **Intune-Lab** resource group using PowerShell. This serves as the parent container for all Azure resources in the lab environment. |
+| **2** | ![VNet and Subnet Creation](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%201%20%E2%80%93%20Azure%20Infrastructure%20Setup/screenshots/phase1-step2-vnet-subnet-creation.png) | Deployed **Intune-VNet** (10.0.0.0/16) and **Intune-Subnet** (10.0.1.0/24) using PowerShell to define the virtual network structure and address space. |
+| **3a** | ![AzureBastionSubnet Creation](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%201%20%E2%80%93%20Azure%20Infrastructure%20Setup/screenshots/phase1-step3a-azurebastionsubnet-creation.png) | Configured a dedicated **AzureBastionSubnet** (10.0.0.192/26) to support Bastion deployment and secure private RDP access. |
+| **3b** | ![Bastion Configuration Review](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%201%20%E2%80%93%20Azure%20Infrastructure%20Setup/screenshots/phase1-step3b-bastion-configuration-review.png) | Reviewed Bastion configuration prior to deployment. Confirmed association with *Intune-VNet* and *Intune-Lab* resource group. |
+| **3c** | ![Bastion Deployment Success](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%201%20%E2%80%93%20Azure%20Infrastructure%20Setup/screenshots/phase1-step3c-bastion-deployment-success.png) | Verified successful deployment of **Intune-Bastion03** in *West US 2*. The Bastion host is now operational for secure connectivity. |
+| **4a** | ![VM Deployment Success](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%201%20%E2%80%93%20Azure%20Infrastructure%20Setup/screenshots/phase1-step4a-vm-deployment-success.png) | Created **IntuneClient01** (Windows 11) in *Intune-Subnet*. This VM acts as the managed client for Intune and policy testing. |
+| **4b** | ![Bastion RDP Connection](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%201%20%E2%80%93%20Azure%20Infrastructure%20Setup/screenshots/phase1-step4b-bastion-rdp-connection.png) | Connected to **IntuneClient01** using Azure Bastion via web-based RDP—no public IP required, enhancing network security. |
+| **4c** | ![Windows 11 OOBE Setup](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%201%20%E2%80%93%20Azure%20Infrastructure%20Setup/screenshots/phase1-step4c-windows11-oobe-setup.png) | Completed the **Windows 11 Out-of-Box Experience (OOBE)**, confirming successful VM initialization within the private network. |
+| **4d** | ![Windows 11 Desktop](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%201%20%E2%80%93%20Azure%20Infrastructure%20Setup/screenshots/phase1-step4d-windows11-desktop.png) | Reached the Windows 11 desktop through Bastion RDP, validating full end-to-end connectivity and lab readiness. |
+
 
 ---
 
