@@ -62,14 +62,34 @@ Each lab directory includes:
 
 ## 📸 Screenshots  
 
-| Step | Screenshot | Description |
-|------|-------------|--------------|
-| **1** | ![phase2-step1-device-enrollment.png](screenshots/phase2-step1-device-enrollment.png) | Initiated Windows device enrollment via “Access work or school,” connecting to Cumulus Labs Entra ID. |
-| **2** | ![phase2-step2-compliance-baseline.png](screenshots/phase2-step2-compliance-baseline.png) | Created the *Windows Compliance Baseline – Tier 1* policy to enforce Defender and encryption standards. |
-| **3a** | ![phase2-step3a-noncompliance-action.png](screenshots/phase2-step3a-noncompliance-action.png) | Configured action to mark noncompliant devices immediately for real-time enforcement. |
-| **3b** | ![phase2-step3b-m365-baseline.png](screenshots/phase2-step3b-m365-baseline.png) | Deployed *M365 Security Baseline – Tier 1* for enterprise-grade configuration consistency. |
-| **4** | ![phase2-step4-dsregcmd-status.png](screenshots/phase2-step4-dsregcmd-status.png) | Verified successful MDM registration via PowerShell showing `Managed by MDM` and `KeySignTest : PASSED`. |
-| **5** | ![phase2-step5-device-compliant.png](screenshots/phase2-step5-device-compliant.png) | Intune Admin Center confirming `IntuneClient01` is enrolled, compliant, and managed by Intune. |
+### Step 1: Device Enrollment Confirmation  
+![Device Enrollment Confirmation](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%202%20%E2%80%93%20Intune%20Enrollment%20%26%20Device%20Management/Screenshots/phase2-step1-device-enrollment.png)  
+The Windows 11 VM (**IntuneClient01**) successfully enrolled into Microsoft Intune, showing a connection to Cumulus Labs’s Entra ID for MDM management.  
+
+---
+
+### Step 2: Windows Compliance Baseline Creation  
+![Windows Compliance Baseline Creation](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%202%20%E2%80%93%20Intune%20Enrollment%20%26%20Device%20Management/Screenshots/phase2-step2-windows-compliance-baseline.png)  
+Created a custom **Windows Compliance Baseline – Tier 1** to define compliance rules for Windows 10/11 devices and monitor posture.  
+
+---
+
+### Step 3: Microsoft 365 Security Baseline Profile  
+![Microsoft 365 Security Baseline Profile](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%202%20%E2%80%93%20Intune%20Enrollment%20%26%20Device%20Management/Screenshots/phase2-step3-m365-security-baseline.png)  
+Configured the **Microsoft 365 Apps for Enterprise Security Baseline – Tier 1** profile to apply secure configuration standards across Office apps.  
+
+---
+
+### Step 4: MDM Diagnostic Verification  
+![MDM Diagnostic Verification](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%202%20%E2%80%93%20Intune%20Enrollment%20%26%20Device%20Management/Screenshots/phase2-step4-mdm-diagnostic-data.png)  
+Validated successful MDM registration of **IntuneClient01** via diagnostic data — confirming configuration settings were successfully managed by Intune.  
+
+---
+
+### Step 5: Device Compliance Status  
+![Device Compliance Status](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%202%20%E2%80%93%20Intune%20Enrollment%20%26%20Device%20Management/Screenshots/phase2-step5-device-compliance-confirmation.png)  
+Confirmed **IntuneClient01** is managed by Intune and compliant with all applied baselines and security policies.  
+
 
 ---
 
