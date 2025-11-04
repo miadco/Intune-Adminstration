@@ -56,20 +56,39 @@ Each lab directory includes:
 
 ## 📸 Screenshots
 
-**Step 1: Intune Management Extension Verification**  
-Intune Management Extension installed successfully on IntuneClient01, enabling advanced Win32 app deployment.  
+### Step 1: Intune Pilot Group Membership  
+Confirmed that **IntuneClient01** was successfully added to the **Intune-Pilot-Devices** group, ensuring proper targeting for all deployment and configuration policies in this phase.  
+![Intune Pilot Group Membership](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%203%20%E2%80%93%20Application%20Deployment%20%26%20Configuration%20Profiles/Screenshots/phase3-step1-intune-pilot-group-membership.png)
 
-**Step 2: BitLocker Policy Configuration**  
-Created and assigned a BitLocker configuration profile enforcing TPM + PIN protection.  
+---
 
-**Step 3: Windows Security Baseline (24H2)**  
-Deployed Microsoft’s Windows Security Baseline and verified applied settings through local policy results.  
+### Step 2: BitLocker Policy Configuration  
+Created and assigned a **Disk Encryption Policy** under *Endpoint Security → Disk encryption*. Configured encryption settings (TPM + PIN) and assigned the policy to the **Intune-Pilot-Devices** group.  
+![BitLocker Policy Configuration](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%203%20%E2%80%93%20Application%20Deployment%20%26%20Configuration%20Profiles/Screenshots/phase3-step2-bitlocker-policy-creation.png)
 
-**Step 4: BitLocker Status Validation**  
-Confirmed encryption status using PowerShell `Get-BitLockerVolume` – Protection Status displayed as **On**.  
+---
 
-**Step 5: Compliance Results**  
-Validated all policies and deployments as successful in Intune Admin Center.  
+### Step 3: Microsoft 365 Apps Deployment  
+Deployed **Microsoft 365 Apps for Enterprise** as a required application for managed devices. Selected 64-bit installation, enabled automatic updates, and assigned to the **Intune-Pilot-Devices** group.  
+![Microsoft 365 Apps Deployment](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%203%20%E2%80%93%20Application%20Deployment%20%26%20Configuration%20Profiles/Screenshots/phase3-step3-m365-apps-deployment.png)
+
+---
+
+### Step 4: Windows Security Baseline (24H2) Deployment  
+Deployed and assigned the **Cumulus Labs – Windows Security Baseline (24H2)** to ensure consistent enterprise-grade security configurations. Confirmed policy synchronization with Intune.  
+![Windows Security Baseline Deployment](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%203%20%E2%80%93%20Application%20Deployment%20%26%20Configuration%20Profiles/Screenshots/phase3-step4-security-baseline-deployment.png)
+
+---
+
+### Step 5: BitLocker Encryption Validation  
+Validated BitLocker encryption using PowerShell command `Get-BitLockerVolume`. Output confirmed **FullyEncrypted** status with protection **On**, ensuring successful enforcement of encryption policy.  
+![BitLocker Encryption Validation](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%203%20%E2%80%93%20Application%20Deployment%20%26%20Configuration%20Profiles/Screenshots/phase3-step5-get-bitlockervolume-status.png)
+
+---
+
+### Step 6: Device Compliance Results  
+Reviewed compliance posture of **IntuneClient01** in Intune Admin Center. Device reported as compliant across all key indicators. The **65001 (Not applicable)** message appeared because no dedicated compliance policy was assigned — a known Intune reporting limitation that does not impact overall compliance.  
+![Device Compliance Results](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%203%20%E2%80%93%20Application%20Deployment%20%26%20Configuration%20Profiles/Screenshots/phase3-step6-compliance-results.png)
 
 ## 📈 Outcomes Summary
 
