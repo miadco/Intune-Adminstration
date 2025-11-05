@@ -62,7 +62,36 @@ Each lab directory includes:
 
 ---
 
-📸 Screenshots  
+## 📸 Screenshots
+
+### Step 1: Defender Antivirus Policy Configuration
+Created and configured the **Phase 4 – Defender Antivirus Policy** under *Endpoint security → Antivirus*. Enabled real-time monitoring, cloud protection, automatic sample submission, and set remediation actions.  
+![Defender Antivirus Policy Configuration](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%204%20%E2%80%93%20Monitoring%2C%20Reporting%20%26%20Endpoint%20Security%20Remediation/Screenshots/phase4-step1-defender-policy-configuration.png)
+
+### Step 2: PowerShell Verification of Defender Status
+Ran `Get-MpComputerStatus` to confirm Defender services are active: RealTimeProtection, Antispyware, IOAV, and NIS.  
+![PowerShell Verification of Defender Status](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%204%20%E2%80%93%20Monitoring%2C%20Reporting%20%26%20Endpoint%20Security%20Remediation/Screenshots/phase4-step2-getmpcomputerstatus.png)
+
+### Step 3: Defender for Endpoint Connector Configuration
+Validated the Intune ↔ Microsoft 365 Defender connection is **Available** under *Endpoint security → Setup → Microsoft Defender for Endpoint*.  
+![Defender for Endpoint Connector Configuration](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%204%20%E2%80%93%20Monitoring%2C%20Reporting%20%26%20Endpoint%20Security%20Remediation/Screenshots/phase4-step3-defender-connector.png)
+
+### Step 4: Device Compliance Overview
+Viewed *Reports → Device compliance* to confirm **IntuneClient01** is **Compliant**, indicating policies applied and reporting is working.  
+![Device Compliance Overview](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%204%20%E2%80%93%20Monitoring%2C%20Reporting%20%26%20Endpoint%20Security%20Remediation/Screenshots/phase4-step4-compliance-overview.png)
+
+### Step 5: EICAR Threat Detection Notification
+Simulated malware with the EICAR test file. Defender immediately detected and quarantined the file, proving real-time protection.  
+![EICAR Threat Detection Notification](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%204%20%E2%80%93%20Monitoring%2C%20Reporting%20%26%20Endpoint%20Security%20Remediation/Screenshots/phase4-step5-eicar-alert.png)
+
+### Step 6: PowerShell EICAR Detection Log
+Used `Get-MpThreat` to show **Virus:DOS/EICAR_Test_File** was detected and remediated, confirming the AV response pipeline.  
+![PowerShell EICAR Detection Log](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%204%20%E2%80%93%20Monitoring%2C%20Reporting%20%26%20Endpoint%20Security%20Remediation/Screenshots/phase4-step6-eicar-detection.png)
+
+### Step 7: Cloud Protection Settings Verification
+Checked `Get-MpPreference` to verify MAPS telemetry, sample submission, and cloud-delivered protection configuration.  
+![Cloud Protection Settings Verification](https://github.com/miadco/Intune-Adminstration/blob/main/Phase%204%20%E2%80%93%20Monitoring%2C%20Reporting%20%26%20Endpoint%20Security%20Remediation/Screenshots/phase4-step7-cloud-settings.png)
+  
 
 ---
 
